@@ -27,4 +27,5 @@ def run(app_names: list):
 
 if __name__ == "__main__":
     app_names = ["WeChat"]
-    run(app_names)
+    # run(app_names)
+    get_data(app_names)
