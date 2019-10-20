@@ -4,6 +4,8 @@
 
 ## 介绍
 
+详细实现介绍见这篇推文：[不论微信钉钉还是什么软件，我写了个通用的消息监控处理机器人](https://mp.weixin.qq.com/s/-QDjgnKn_22DoeR2ti4iyA)
+
 ## 使用
 
 ```shell
@@ -37,5 +39,3 @@ if __name__ == "__main__":
 ```shell
 {'title': '老胡的储物柜', 'subtitle': '', 'body': '测试消息监控，任何应用都行', 'delivered_date': datetime.datetime(2019, 10, 20, 21, 40, 26, 428654), 'presented': 1, 'app_identifier': 'com.tencent.xinwechat', 'app_name': 'WeChat', 'md5': '75e24e2ccc502f01c101fcbd3637950b'}
 ```
-
-## 更多
