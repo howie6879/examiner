@@ -8,5 +8,5 @@ import abc
 
 class BaseNotification:
     @abc.abstractmethod
-    def get_target_notification(self, **kwargs):
+    def get_notifications(self, **kwargs):
         pass

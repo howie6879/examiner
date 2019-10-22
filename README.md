@@ -9,29 +9,28 @@
 ## 使用
 
 ```shell
+pip install examiner
+# 新特性
+pip install git+https://github.com/howie6879/examiner
+
+# 开发
 git clone https://github.com/howie6879/examiner
 cd examiner
 # 推荐使用pipenv 你也可以使用自己中意的环境构建方式
 pipenv install --python=/Users/howie6879/anaconda3/envs/python36/bin/python3.6  --skip-lock
+
 ```
 
-接下来只需要在根目录构建自己的监控脚本就行，比如监控微信，监理文件命名为 `wechat_app.py`:
+接下来只需要在根目录构建自己的监控脚本就行，比如监控微信，建立文件命名为 `wechat_app.py`:
 
 ```python
-from examiner.notification import notification_factory
+from examiner import Examiner
 
-
-def get_data(app_names: list):
-    os_notification = notification_factory(app_names)
-    info_list = os_notification.get_target_notification()
-    for each in info_list:
-        # 自行实现监控逻辑以及处理方案
-        print(each)
-
-
-if __name__ == "__main__":
-    app_names = ["WeChat"]
-    get_data(app_names)
+app_names = ["Wechat"]
+examiner_app = Examiner(app_names)
+info_list = examiner_app.get_notifications()
+for each in info_list:
+    print(each)
 ```
 
 输出：
