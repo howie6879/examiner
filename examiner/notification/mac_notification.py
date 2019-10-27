@@ -60,7 +60,7 @@ class MacNotification(BaseNotification):
         return date
 
     def get_notifications(self):
-        """获取监控的目标app的所有提示新歘"""
+        """获取监控的目标app的所有监控中心的消息"""
         app_ids = ",".join(str(i) for i in self.app_id_dict.keys())
         sql_str = f"""
         SELECT app_id,data, presented, delivered_date FROM record WHERE app_id IN ({app_ids})  ORDER BY delivered_date DESC;

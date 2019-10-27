@@ -27,7 +27,7 @@ class DeepInNotification(BaseNotification):
         return date
 
     def get_notifications(self):
-        """获取监控的目标app的所有提示新歘"""
+        """获取监控的目标app的所有监控中心的消息"""
         app_str = ",".join(f"'{i}'" for i in self.app_names)
         sql_str = f"""
         SELECT * FROM notifications2 WHERE AppName IN ({app_str})  ORDER BY CTime DESC;
