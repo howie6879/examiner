@@ -4,4 +4,4 @@
 """
 
 from .log import logger
-from .tools import gen_md5, get_os_type
+from .tools import exec_cmd, gen_md5, get_os_type

@@ -12,3 +12,4 @@ class Config:
     )
     INTERVAL = int(os.environ.get("INTERVAL", 60))
     MAC_DB_CMD = "echo `getconf DARWIN_USER_DIR`com.apple.notificationcenter/db2"
+    DEEPIN_DB_CMD = "echo /**/data.db"

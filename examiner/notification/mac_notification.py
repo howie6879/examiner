@@ -4,7 +4,6 @@
 """
 import os
 import plistlib
-import subprocess
 
 from datetime import datetime
 
@@ -12,7 +11,7 @@ from biplist import readPlistFromString
 
 from examiner.config import Config
 from examiner.databases import SqliteBase
-from examiner.utils import gen_md5, logger
+from examiner.utils import exec_cmd, gen_md5, logger
 from examiner.notification.base_notification import BaseNotification
 
 
@@ -25,7 +24,7 @@ class MacNotification(BaseNotification):
 
     def _get_db_path(self):
         # cmd = "lsof -p $(ps aux | grep -m1 usernoted | awk '{ print $2 }')| awk '{ print $9 }' | grep 'db2/db$' | xargs dirname"
-        _, stdout = subprocess.getstatusoutput(self.db_cmd)
+        _, stdout = exec_cmd(self.db_cmd)
         db_path = os.path.join(stdout, "db")
         return db_path
 
