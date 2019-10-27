@@ -13,11 +13,11 @@ class Examiner:
     入口
     """
 
-    def __init__(self, app_names: list):
+    def __init__(self, app_names: list, **kwargs):
         self.config = Config
         self.logger = logger
         self.app_names = app_names
-        self.os_notification = notification_factory(app_names)
+        self.os_notification = notification_factory(app_names, **kwargs)
 
     def get_notifications(self):
         return self.os_notification.get_notifications()
