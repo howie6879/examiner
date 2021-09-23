@@ -6,6 +6,7 @@ verify_ssl = true
 [dev-packages]
 black = "*"
 schedule = "*"
+isort = {extras = ["pipfile_deprecated_finder"], version = "*"}
 
 [packages]
 biplist = "*"

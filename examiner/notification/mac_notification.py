@@ -11,8 +11,8 @@ from biplist import readPlistFromString
 
 from examiner.config import Config
 from examiner.databases import SqliteBase
-from examiner.utils import exec_cmd, gen_md5, logger
 from examiner.notification.base_notification import BaseNotification
+from examiner.utils import exec_cmd, gen_md5, logger
 
 
 class MacNotification(BaseNotification):

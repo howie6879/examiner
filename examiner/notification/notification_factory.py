@@ -3,10 +3,10 @@
  Created by howie.hu at 2019-10-20.
 """
 
-from examiner.utils import exec_cmd, get_os_type
 from examiner.notification.base_notification import BaseNotification
 from examiner.notification.deepin_notification import DeepInNotification
 from examiner.notification.mac_notification import MacNotification
+from examiner.utils import exec_cmd, get_os_type
 
 
 def notification_factory(app_names: list, **kwargs) -> BaseNotification:

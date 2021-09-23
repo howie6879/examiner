@@ -7,8 +7,8 @@ from datetime import datetime
 
 from examiner.config import Config
 from examiner.databases import SqliteBase
-from examiner.utils import exec_cmd, gen_md5
 from examiner.notification.base_notification import BaseNotification
+from examiner.utils import exec_cmd, gen_md5
 
 
 class DeepInNotification(BaseNotification):
